@@ -1,0 +1,41 @@
+Scala sama tworzy gettery i settery.
+
+class Person(val givenName:String, var surname:String, val id:String, ){ }
+
+Person p = new Person("Jan", "Kowalski", "123123123")
+print(p.givenName) -> getter do stałej
+print(p.surname) -> getter do zmiennej
+p.surname = "Nowak" <=> p.surname_$eq("Nowak") -> setter do zmiennej (def surname_$eq)
+
+
+
+Jeśli metoda nie zmienia stanu obiektu, to nie piszemy wtedy nawiasów!!! 
+np.: def name = givenName + surname
+     def increment() = i + 1
+
+
+Metody fabryczne - tworzą nowe obiekty
+Object - pojedynczy obiekt, singleton. Pod spodem jego rzeczy są zamieniane na statyczne elementy
+
+
+
+
+def unary_-()   operator jednostkowy(unary) (tylko dla - ! ~ + )
+
+
+Obiekt towarzyszący musi być zdeifniowany w tym samym pliku co klasa (moze odwoływać się do prywatnych pól i metod),
+Obiekt towarzyszący powinien dostarczać klasę -> metoda fabryczna.
+x = Int2DVec.apply(5) to to samo co x = Int2DVec(5)
+
+gdy x = new Int2DVec(5, 3) wywołujemy konstruktor, gdy x = Int2DVec(5) -> obiekt towarzyszący
+
+
+
+
+Trait - abstrakcyjny, nie mozna stworzyc obiektu typu trait. 
+Moze miec pola, metody. 
+
+Uzycie:
+- definicje abstrakcyjnego typu (definicja interfejsu, w Scali interfejsu nie ma, są traity)
+- dodanie pewnych funkcjonalności do istniejących klas lub obiektów 
+- dodajemy lub wmiksowujemy do danej klasy

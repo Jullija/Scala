@@ -1,0 +1,22 @@
+  intrukcja nic nie zwraca
+  
+  Scala:
+  =      instrukcja
+  if     wyrazenie
+  while, do-while, for     instrukcja 
+   for-yield     wyrazenie
+  {} blok kodu    wyrazenie
+
+
+Unit to pusta wartość - jak coś nie zwraca wartości do zwraca Unit
+Int, Double, Unit, Char dziedziczą z typu AnyVal
+String MyClass System dziedziczą z AnyRef (alias do java.lang.Object)
+AnyRed i AnyVal dziedziczą  Any
+
+
+val x = if (a>0) a else -1.0     zwróci Double (niejawna konwersja)
+
+
+
+
+zawsze definiujemy typ w metodzie i musi być znak równości (12.3 -> poza jednolinijkowymi lepiej jasno definiować, bo bez typu i znaku były problemy)
