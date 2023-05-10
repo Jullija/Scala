@@ -1,0 +1,11 @@
+eqauls musi działać w dwie strony
+a.equals(b) i  b.equals(a)
+
+dzięki case class mozemy łatwiej zdefiniować niemutowalne pola
+(nie piszemy val x: Int tylko samo x: Int)
+przy case class zdeifniuje nam się duzo przydatnych metod (dostajemy equals i hashCode, toString, copy)
+
+sealed trait T
+class T1 extends T
+class T2 extends T
+- klasy te mozna definiować tylko w tym samym pliku
